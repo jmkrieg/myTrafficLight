@@ -26,11 +26,10 @@
 
 FROM tensorflow/tensorflow:latest-gpu-py3 
 LABEL maintainer "Ina Schmidt"
-RUN apt update && \
-    apt upgrade && \
-    apt install -y python3-pip && \
-    apt autoremove && \
-    apt clean && \
+RUN apt-get update && \
+    apt-get install -y python3-pip && \
+    apt-get autoremove && \
+    apt-get clean && \
     pip3 install numpy matplotlib pillow opencv-python && \
     rm -rf /var/lib/apt/lists/*
 CMD [ "/bin/bash" ]
