@@ -25,4 +25,12 @@
 # -- opencv-python
 
 FROM tensorflow
-RUN apt-get 
+LABEL maintainer "Ina Schmidt"
+RUN sudo apt update && \
+    sudo apt upgrade && \
+    sudo apt install -y python3-pip && \
+    apt autoremove && \
+    apt clean && \
+    pip3 install numpy matplotlib pillow opencv-python && \
+    rm -rf /var/lib/apt/lists/*
+CMD [ "/bin/bash" ]
