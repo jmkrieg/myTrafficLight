@@ -24,7 +24,7 @@
 # -- pillow
 # -- opencv-python
 
-FROM tensorflow
+FROM tensorflow/tensorflow:latest-gpu-py3 
 LABEL maintainer "Ina Schmidt"
 RUN sudo apt update && \
     sudo apt upgrade && \
