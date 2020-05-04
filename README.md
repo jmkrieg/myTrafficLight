@@ -12,12 +12,19 @@ If the lights are "red" or "yellow", it outputs command "stop"; If the
 
 * [environment-gpu.yml](environment-gpu.yml) environment file with GPU
 
+#### 2. How to run the container
+```sh
 
+docker run --gpus all -it <containerName>:<tag>
+
+```
+
+```sh
 #### 2. How to run the code
 
 ```sh
 
-python main.py
+python3 main.py
 
 ```
 
