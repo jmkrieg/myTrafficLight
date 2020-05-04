@@ -27,9 +27,9 @@
 FROM tensorflow/tensorflow:latest-gpu-py3 
 LABEL maintainer "Ina Schmidt"
 RUN apt-get update && \
-    apt-get install -y python3-pip && \
-    apt-get autoremove && \
+    apt-get install -y python3-pip libsm6 && \
     apt-get clean && \
     pip3 install numpy matplotlib pillow opencv-python && \
     rm -rf /var/lib/apt/lists/*
+COPY volume home/trafficLightDetection
 CMD [ "/bin/bash" ]
