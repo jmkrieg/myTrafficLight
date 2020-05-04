@@ -19,8 +19,7 @@ docker run --gpus all -it <containerName>:<tag>
 
 ```
 
-```sh
-#### 2. How to run the code
+#### 3. How to run the code
 
 ```sh
 
