@@ -11,6 +11,9 @@ from utils import visualization_utils as vis_util
 import time
 import cv2
 
+gpus = tf.config.experimental.list_physical_devices('GPU')
+for gpu in gpus:
+    tf.config.experimental.set_memory_growth(gpu, True)
 
 def detect_red(img, Threshold=0.01):
     """
